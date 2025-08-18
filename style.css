@@ -101,6 +101,7 @@
 }
 .modal-content {
     background-color: white;
+    height: 90%;
     padding: 30px;
     border-radius: 15px;
     max-width: 320px;
