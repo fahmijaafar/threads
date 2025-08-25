@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Children's Playhouse</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const frontContainer = document.getElementById("front-container");
+    const mainContainer = document.getElementById("main-container");
+
+    // hide main-container initially
+    mainContainer.style.display = "none";
+
+    let clickCount = 0;
+
+    frontContainer.addEventListener("click", function (e) {
+        if (e.target.tagName === "IMG") {
+            clickCount++;
+
+            if (clickCount >= 2) {
+                frontContainer.style.display = "none";
+                mainContainer.style.display = "block";
+            }
+        }
+    });
+});
+    </script>
+<body>
+    <div class="front-container" id="front-container">
+        <img src="main-bg.png" class="main-img">
+        <img src="knock.png" class="knock-img">
+    </div>
+    <div class="main-container" id="main-container">
+        <div class="name-img-container">
+            <img src="name-plaque.webp" class="name-img">
+        </div>
+        <div class="card text-center">
+            <p class="header-txt">Your Perfect Family Getaway in Johor Bahru Awaits!</p>
+            <p class="sub-txt">Book your spacious homestay near LEGOLAND® on Booking.com!</p>
+            <button class="book-btn">Book Now<span class="material-symbols-outlined">calendar_check</span></button>
+        </div>
+        <div class="card">
+            <div class="header-container">
+                <p class="sub-header-txt text-center">Our Location</p>
+                <p class="rvw-icn"><span class="material-symbols-outlined icon-hdr">distance</span></p>
+            </div>
+            <div class="map-img-container">
+                <img src="map-mock.png" class="map-img">
+            </div>
+        <div class="destinations-card">
+        <div class="destination">
+            <div class="time-txt">
+            <span class="no-txt">3</span>
+            <span>min</span>
+            </div>
+            <div class="icon-circle">
+            <span class="material-symbols-outlined icon-sz">castle</span>
+            </div>
+            <p class="place-name">LEGOLAND®</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="destination">
+            <div class="time-txt">
+            <span class="no-txt">20</span>
+            <span>min</span>
+            </div>
+            <div class="icon-circle">
+            <span class="material-symbols-outlined icon-sz">flyover</span>
+            </div>
+            <p class="place-name">Tuas</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="destination">
+            <div class="time-txt">
+            <span class="no-txt">20</span>
+            <span>min</span>
+            </div>
+            <div class="icon-circle">
+            <span class="material-symbols-outlined icon-sz">location_city</span>
+            </div>
+            <p class="place-name">JB City</p>
+        </div>
+        </div>
+
+        </div>
+        <div class="card text-center ">
+            <div class="header-container">
+                <p class="sub-header-txt text-center">Layout & Facilities</p>
+                <p class="rvw-icn"><span class="material-symbols-outlined icon-hdr">local_activity</span></p>
+            </div>
+            <div class="map-img-container">
+                <img src="layout.webp" class="map-img">
+            </div>
+            <div class="facilities">
+                <div class="facility-box">
+                    <span class="material-symbols-outlined">bathtub</span>
+                    <p>Bathtub</p>
+                </div>
+                <div class="facility-box">
+                    <span class="material-symbols-outlined">wifi</span>
+                    <p>WiFi</p>
+                </div>
+                <div class="facility-box">
+                    <span class="material-symbols-outlined">pool</span>
+                    <p>Pool</p>
+                </div>
+                <div class="facility-box">
+                    <span class="material-symbols-outlined">ac_unit</span>
+                    <p>AC</p>
+                </div>
+                <div class="facility-box">
+                    <span class="material-symbols-outlined">smoke_free</span>
+                    <p>Smoking</p>
+                </div>
+                <div class="facility-box">
+                    <span class="material-symbols-outlined">garage</span>
+                    <p>Parking</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header-container">
+                <p class="sub-header-txt text-center">Customer's Review</p>
+                <p class="rvw-icn"><span class="material-symbols-outlined icon-hdr">reviews</span></p>
+            </div>
+            <div class="rvw-container">
+                <p class="rvw-str text-center" id="rvw-str">⭐⭐⭐⭐⭐</p>
+                <p class="rvw-txt" id="rvw-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae semper ipsum. Cras ullamcorper nibh massa. Integer vitae erat eget sapien commodo sollicitudin.</p>
+                <p class="rvw-nm" id="rvw-nm">- Hanna, 23, Kajang</p>
+                <div class="acc-icn text-center">
+                    <span class="material-symbols-outlined active-rvw" id="circle1">circle</span>
+                    <span class="material-symbols-outlined inactive-rvw" id="circle2">circle</span>
+                    <span class="material-symbols-outlined inactive-rvw" id="circle3">circle</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="book-btn btm-btn">Book Your Stay Now<span class="material-symbols-outlined">calendar_check</span></button>
+        </div>
+        
+    </div>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const rvwStr = document.getElementById("rvw-str");
+    const rvwTxt = document.getElementById("rvw-txt");
+    const rvwNm = document.getElementById("rvw-nm");
+    const rvwContainer = document.querySelector(".rvw-container");
+
+    const reviews = [
+        {
+            str: "⭐⭐⭐⭐⭐",
+            txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae semper ipsum. Cras ullamcorper nibh massa ferror.",
+            nm: "- Hanna, 23, Kajang",
+        },
+        {
+            str: "⭐⭐⭐⭐",
+            txt: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis a purus sed neque pharetra fermentum.",
+            nm: "- Umar, 30, Ampang"
+        },
+        {
+            str: "⭐⭐⭐⭐⭐",
+            txt: "Donec vel augue nec ipsum posuere gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+            nm: "- Aisha, 27, Kuala Lumpur"
+        }
+    ];
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    function showReview(index) {
+        rvwContainer.classList.add("fade-out");
+
+        setTimeout(() => {
+            const review = reviews[index];
+            rvwStr.textContent = review.str;
+            rvwTxt.textContent = review.txt;
+            rvwNm.textContent = review.nm;
+
+            // Update active/inactive circles
+            reviews.forEach((_, i) => {
+                const circle = document.getElementById(`circle${i + 1}`);
+                if (circle) {
+                    if (i === index) {
+                        circle.classList.add("active-rvw");
+                        circle.classList.remove("inactive-rvw");
+                    } else {
+                        circle.classList.add("inactive-rvw");
+                        circle.classList.remove("active-rvw");
+                    }
+                }
+            });
+
+            currentIndex = index;
+            rvwContainer.classList.remove("fade-out");
+        }, 600); // matches transition duration
+    }
+
+    // Attach click events
+    reviews.forEach((_, index) => {
+        const circle = document.getElementById(`circle${index + 1}`);
+        if (circle) {
+            circle.addEventListener("click", function () {
+                showReview(index);
+                resetAutoSlide();
+            });
+        }
+    });
+
+    // Auto slide
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            let nextIndex = (currentIndex + 1) % reviews.length;
+            showReview(nextIndex);
+        }, 4000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+
+    // Init
+    showReview(0);
+    startAutoSlide();
+});
+</script>
+
+</html>
