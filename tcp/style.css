@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body{
+    background-color: #e8d7c2;
+}
+p{
+    font-family: 'Poppins';
+}
+.text-center{
+    text-align: center;
+}
+.main-img{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+.knock-img{
+    position: absolute;
+    bottom: 50%;
+    left: 60%;
+    width: 30%;
+    transform: rotate(20deg)
+}
+.main-container{
+    padding: 20px;
+}
+.name-img-container{
+    text-align: center;
+}
+.name-img{
+    width: 200px;
+}
+.card{
+  background-color: #f5f0e3;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 6px 3px #ead1b1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.header-txt{
+    font-size: 1.5em !important;
+}
+.sub-txt{
+    color: #6a7c76;
+}
+.book-btn {
+    font-family: 'Poppins';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 24px;
+    background-color: #c0a885;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+.btm-btn{
+    width: 100%;
+}
+
+.book-btn:hover {
+    background-color: #c0a885;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-btn:active {
+    background-color: #c0a885;
+    transform: translateY(0);
+    box-shadow: none;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+.header-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-header-txt{
+    font-size: 1.5em !important;
+    justify-content: center;
+}
+.header-sym{
+    padding-right: 5px;
+    color: #c0a885;
+    transform: translateY(4px);
+}
+.map-img-container{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+.map-img{
+    max-width: 100%;
+}
+.destinations-card {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: stretch;
+    background: #f9f5ef;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.destination {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+.divider {
+  width: 1px;
+  background: #e2e8f0; /* light gray line */
+  margin: 0 10px;
+}
+
+.time-txt {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6a7c76;
+  margin-bottom: 8px;
+}
+
+.time-txt .no-txt {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.icon-circle {
+  background: #c0a885;
+  border-radius: 50%;
+  padding: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.icon-sz {
+  font-size: 28px !important;
+  color: white;
+}
+.icon-hdr{
+    font-size: 28px !important;
+    color: #c0a885;
+}
+
+.place-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.facility-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.facility-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.facility-box span {
+  font-size: 36px;
+  color: #c0a885;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.facility-box p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+.fac-icn{
+    font-size: 1.5em;
+    color: #c0a885;
+}
+.rvw-txt{
+    font-style: italic;
+}
+.rvw-container{
+    padding: 0px 30px;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+.rvw-container.fade-out {
+  opacity: 0;
+}
+.active-rvw{
+    color: #c0a885;
+    font-size: 15px !important;
+}
+.inactive-rvw{
+    color: #ead1b1;
+    font-size: 15px !important;
+}
